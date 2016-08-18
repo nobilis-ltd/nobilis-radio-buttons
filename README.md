@@ -30,14 +30,14 @@ Ensure the source matches the directory where you've saved the plugin file. Also
 </div>
 ````
 
-The above template is the bare minimum structure needed for the buttons to work. The buttons can be nested and also have other elements between them. Thus within `div.norb`, there should be a `<input>` field (preferably hidden) and at least one `<button data-value=""></button>`.
+The above template is the bare minimum structure needed for the buttons to work. The buttons can be nested and also have other elements between them. Thus within `div.norb`, there should be a `<input>` tag (preferably hidden) and at least one `<button data-value=""></button>` tag.
 
 3) Add the following line to the end of the HTML document, right after where you've included the plugin. This initializes the plugin.
 
 ```html
 <script type="text/javascript">
-// Initialize the plugin at the end of the file
-NoRB.init();
+	// Initialize the plugin at the end of the file
+	NoRB.init();
 </script>
 ```
 
