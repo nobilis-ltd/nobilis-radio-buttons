@@ -2,7 +2,7 @@
 
 Hey and thanks for checking out our plugin!
 
-The (NoRB) is a JS plugin aimed at improving the appearance of radio buttons in forms. It does so by allowing developers attach different styling to the elements while maintaining the radio-button-like functionality.
+The NoRB is a Javascript plugin aimed at improving the appearance of radio buttons in forms. It does so by allowing developers attach different styling to the elements while maintaining the radio-button-like functionality.
 
 ## Setup
 
@@ -30,7 +30,7 @@ Ensure the source matches the directory where you've saved the plugin file. Also
 </div>
 ````
 
-The above template is the bare minimum structure needed for the buttons to work. The buttons can be nested and also have other elements between them. Thus within 'div.nob-radio-buttons', there should be an '<input>' field (preferably hidden) and at least one '<button data-value=""></button>'.
+The above template is the bare minimum structure needed for the buttons to work. The buttons can be nested and also have other elements between them. Thus within ```css div.norb```, there should be a ```html <input>``` field (preferably hidden) and at least one ```html <button data-value=""></button>```.
 
 3. Add the following line to the end of the HTML document, right after where you've included the plugin. This initializes the plugin.
 
