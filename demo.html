@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Nobilis Radio Buttons Plugin :: Demo</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700" rel="stylesheet">
+  <style type="text/css">
+    html,body {
+      width: 100%;
+      margin: 0;
+      background-color: whitesmoke;
+      line-height: 1.4;
+      font-family: "Droid Serif";
+    }
+
+    .demo {
+      width: 600px;
+      margin: 25px auto;
+      background-color: white;
+      padding: 25px;
+      color: #333;
+      -webkit-box-shadow: 5px 5px 15px 2px rgba(0,0,0,0.2);
+      -moz-box-shadow: 5px 5px 15px 2px rgba(0,0,0,0.2);
+      box-shadow: 5px 5px 15px 2px rgba(0,0,0,0.2);
+    }
+
+    .demo h2, .demo p {
+      margin: 5px 0;
+    }
+
+    .demo .help-text {
+      font-style: italic;
+    }
+
+    .demo hr {
+      border: 1px solid #eee;
+    }
+
+    .norb {
+      padding: 10px;
+    }
+
+    .norb input {
+      background-color: #fff;
+      border: 2px solid #ccc;
+      padding: 6px 12px;
+      font-family: "Droid Serif";
+    }
+
+    .norb .btn-group {
+      position: relative;
+      display: inline-block;
+      overflow: auto;
+      border: 2px solid #dadada;
+      border-radius: 7px;
+    }
+
+    .norb .btn-group button {
+      border: 0;
+      float: left;
+      padding: 10px;
+      background-color: #eee;
+      color: #999;
+      border-right: 2px solid #dadada;
+      font-family: "Droid Serif";
+      font-weight: bold;
+    }
+
+    .norb .btn-group button:last-child {
+      border: 0;
+    }
+
+    .norb .btn-group button.selected {
+      background-color: #92c9de;
+      color: #333;
+    }
+  </style>
+
+</head>
+<body>
+
+  <div class="demo">
+    <h2>Nobilis Radio Buttons Display Demo</h2>
+    <p class="help-text">The text inputs are usually hidden but can be displayed to confirm selection</p><br>
+
+    <div class="norb">
+      <p><strong>Preloaded value:</strong></p>
+      <p>You like this plugin? <input value="true" type="hidden" disabled></p>
+
+      <div class="btn-group">
+        <button data-value="true">True</button>
+        <button data-value="false">False</button>
+      </div>
+    </div>
+
+    <hr>
+
+    <div class="norb">
+      <p><strong>True or false selection (two buttons):</strong></p>
+      <p>Now really, do you like this plugin? <input type="hidden" disabled></p>
+      
+      <div class="btn-group">
+        <button data-value="yes">Yes</button>
+        <button data-value="no">No</button>
+      </div>
+    </div>
+
+    <hr>
+
+    <div class="norb">
+      <p><strong>Multiple button selection:</strong></p>
+      <p>Pick a game <input disabled></p>
+
+      <div class="btn-group">
+        <button data-value="Fallout 4">Fallout 4</button>
+        <button data-value="No Man's Sky">No Man's Sky</button>
+        <button data-value="Darkest Dungeon">Darkest Dungeon</button>
+        <button data-value="Skyrim">Skyrim</button>
+      </div>
+      <p class="help-text">* With visible text input</p>
+    </div>
+
+    <hr>
+
+    <div class="norb">
+      <p><strong>Multiple button groups for selection:</strong></p>
+      <p>Pick a game depending on the developer <input type="hidden" disabled></p>
+
+      <p>Bathesda games</p>
+      <div class="btn-group">
+        <button data-value="Fallout 4">Fallout 4</button>
+        <button data-value="Skyrim">Skyrim</button>
+        <button data-value="Dishonoured">Dishonoured</button>
+      </div>
+      <p>Electronic Arts games</p>
+      <div class="btn-group">
+        <button data-value="Assassin's creed">Assassin's creed</button>
+        <button data-value="Battlefield 1">Battlefield 1</button>
+        <button data-value="Burnout Paradise">Burnout Paradise</button>
+      </div>
+      <p>Naughty Dog games</p>
+      <div class="btn-group">
+        <button data-value="Uncharted">Uncharted</button>
+        <button data-value="The Last of Us">The Last of Us</button>
+        <button data-value="Jak and Dexter">Jak and Daxter</button>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="src/jquery-3.1.0.min.js"></script>
+  <script src="src/nobilis-radio-buttons.js"></script>
+  <script type="text/javascript">
+    // Initialize the plugin at the end of the file
+    NoRB.init();
+  </script>
+
+</body>
+</html>
