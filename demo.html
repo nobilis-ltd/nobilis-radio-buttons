@@ -68,6 +68,7 @@
       border-right: 2px solid #dadada;
       font-family: "Droid Serif";
       font-weight: bold;
+      cursor: pointer;
     }
 
     .norb .btn-group button:last-child {
@@ -77,6 +78,14 @@
     .norb .btn-group button.selected {
       background-color: #92c9de;
       color: #333;
+    }
+
+    .norb .btn-group button.disabled {
+      cursor: not-allowed;
+    }
+
+    .norb .btn-group button:focus {
+      outline: none;
     }
   </style>
 
@@ -147,6 +156,26 @@
         <button data-value="Uncharted">Uncharted</button>
         <button data-value="The Last of Us">The Last of Us</button>
         <button data-value="Jak and Dexter">Jak and Daxter</button>
+      </div>
+    </div>
+
+    <div class="norb dependent master" data-dependency-group="ownership">
+      <p><strong>Dependent button groups. This is the master group:</strong></p>
+      <p>Do you own any games? <input type="hidden" value="true" disabled></p>
+
+      <div class="btn-group">
+        <button data-value="true">Yes</button>
+        <button data-value="false">No</button>
+      </div>
+    </div>
+
+    <div class="norb dependent slave" data-dependency-group="ownership">
+      <p><strong>Dependent button groups. This is the slave group:</strong></p>
+      <p>If you own many games, do you play them all? <input type="hidden" disabled></p>
+
+      <div class="btn-group">
+        <button data-value="true" data-dependent-on="true">Yes</button>
+        <button data-value="false" data-dependent-on="true" data-dependency="default">No</button>
       </div>
     </div>
 
