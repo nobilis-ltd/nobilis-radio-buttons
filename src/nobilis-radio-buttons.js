@@ -20,7 +20,6 @@ var NoRB = (function() {
 
 		// Method to run on innitiate
 		startUp();
-		checkSelection();
 	}
 
 	// METHODS
