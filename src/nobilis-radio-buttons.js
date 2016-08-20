@@ -9,16 +9,26 @@ if (typeof jQuery === 'undefined') {
 }
 
 var NoRB = (function() {
+	// VARIABLES
+	var $doc, $btn_groups;
+
 	// CACHE DOM
-	var $doc = $(document);
-	var $btn_groups = $doc.find('.norb');
+	function cacheDOM() {
+		$doc = $(document);
+		$btn_groups = $doc.find('.norb');
+	}
+
+	// Event binding
+	function bindEvents() {
+		$btn_groups.on('click', 'button', setValue);	
+	}
 
 	// INIT
 	function init() {
-		// Event binding
-		$btn_groups.on('click', 'button', setValue);
+		cacheDOM();
+		bindEvents();
 
-		// Method to run on innitiate
+		// Method to run on initiate
 		startUp();
 	}
 
@@ -52,8 +62,7 @@ var NoRB = (function() {
 
 	// Remove '.selected' from all buttons in the group and added to the
 	// clicked button 
-	function setBtns(btn) {
-		var $btn = btn;
+	function setBtns($btn) {
 		var $other_btns = $btn.closest('div.norb').find('button');
 		
 		for(var i=0; i<$other_btns.length; i++) {
