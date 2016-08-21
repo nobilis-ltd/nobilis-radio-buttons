@@ -159,6 +159,8 @@
       </div>
     </div>
 
+    <hr>
+
     <div class="norb dependent master" data-dependency-group="ownership">
       <p><strong>Dependent button groups. This is the master group:</strong></p>
       <p>Do you own any games? <input type="hidden" value="true" disabled></p>
@@ -171,13 +173,27 @@
 
     <div class="norb dependent slave" data-dependency-group="ownership">
       <p><strong>Dependent button groups. This is the slave group:</strong></p>
-      <p>If you own many games, do you play them all? <input type="hidden" disabled></p>
+      <p>If you own games, do you play them all? <input type="hidden" disabled></p>
 
       <div class="btn-group">
         <button data-value="true" data-dependent-on="true">Yes</button>
         <button data-value="false" data-dependent-on="true" data-dependency="default">No</button>
       </div>
     </div>
+
+    <div class="norb dependent slave" data-dependency-group="ownership">
+      <p><strong>Dependent button groups. This is another slave group:</strong></p>
+      <p>If you own games, how many do you own? <input type="hidden" disabled></p>
+
+      <div class="btn-group">
+        <button data-value="0-5" data-dependent-on="true">0-5</button>
+        <button data-value="6-10" data-dependent-on="true">6-10</button>
+        <button data-value="11-15" data-dependent-on="true">11-15</button>
+        <button data-value="many" data-dependent-on="true">>15</button>
+      </div>
+    </div>
+
+    <hr>
 
   </div>
 

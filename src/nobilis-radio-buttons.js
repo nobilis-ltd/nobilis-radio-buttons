@@ -118,7 +118,7 @@ var NoRB = (function() {
 				function(e) {
 					return $(e).data('dependency-group') == dependency_group
 				}
-			)[0]
+			)
 		);
 
 		// loop through all slaves of current master
@@ -126,14 +126,18 @@ var NoRB = (function() {
 			var $slave = $($slaves[i]);
 			var $slave_btns = $slave.find('button');
 
+			// check if slave has default else clear value
+			// default will be set during button loop below
+			if ($slave.find('button[data-dependency="default"]').length == 0) {
+				$slave.find('input').val("");
+			}
+
 			// loop through all buttons in current slave
 			for (var j = 0; j < $slave_btns.length; j++) {
 				var $btn = $($slave_btns[j]);
-
-				// value seems to be a boolean in this case so will
-				// leave dependency as is
 				var dependency = $btn.data('dependent-on');
 
+				// convert values to strings for comparison
 				value = boolToString(value);
 				dependency = boolToString(dependency);
 
@@ -145,6 +149,10 @@ var NoRB = (function() {
 				else {
 					if ($btn.data('dependency') == "default") {
 						$btn.click();
+					}
+					else {
+						// remove in case button group has no default
+						$btn.removeClass('selected');
 					}
 
 					$btn.addClass('disabled');
