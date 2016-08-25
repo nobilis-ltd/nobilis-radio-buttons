@@ -83,6 +83,7 @@ var NoRB = (function() {
 		var $input_field = $btn.closest('div.norb').find('input');
 
 		$input_field.val($btn.data('value'));
+		$input_field.trigger('change');
 
 		setBtns($btn);
 	}
