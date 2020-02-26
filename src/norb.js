@@ -4,9 +4,8 @@
  * that act as radio buttons
  */
 
-if (typeof jQuery === 'undefined') {
-  throw new Error('\'Nobilis Radio Buttons\' requires jQuery')
-}
+import $ from "jquery"
+import _ from "lodash"
 
 // VARIABLES
 let $doc,
