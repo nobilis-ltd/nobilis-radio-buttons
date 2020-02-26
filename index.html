@@ -98,8 +98,9 @@
 
     <div class="norb">
       <p><strong>Preloaded value:</strong></p>
-      <p>You like this plugin? <input value="true" type="hidden" disabled></p>
-
+      <p>You like this plugin?</p>
+      
+      <input value="true" type="hidden" disabled>
       <div class="btn-group">
         <button data-value="true">True</button>
         <button data-value="false">False</button>
@@ -110,8 +111,9 @@
 
     <div class="norb">
       <p><strong>True or false selection (two buttons):</strong></p>
-      <p>Now really, do you like this plugin? <input type="hidden" disabled></p>
+      <p>Now really, do you like this plugin?</p>
       
+      <input type="hidden" disabled>
       <div class="btn-group">
         <button data-value="yes">Yes</button>
         <button data-value="no">No</button>
@@ -123,7 +125,7 @@
     <div class="norb">
       <p><strong>Multiple button selection:</strong></p>
       <p>Pick a game <input disabled></p>
-
+      
       <div class="btn-group">
         <button data-value="Fallout 4">Fallout 4</button>
         <button data-value="No Man's Sky">No Man's Sky</button>
@@ -137,8 +139,9 @@
 
     <div class="norb">
       <p><strong>Multiple button groups for selection:</strong></p>
-      <p>Pick a game depending on the developer <input type="hidden" disabled></p>
-
+      <p>Pick a game depending on the developer</p>
+      
+      <input type="hidden" disabled>
       <p>Bathesda games</p>
       <div class="btn-group">
         <button data-value="Fallout 4">Fallout 4</button>
@@ -163,8 +166,9 @@
 
     <div class="norb dependent master" data-dependency-group="ownership">
       <p><strong>Dependent button groups. This is the master group:</strong></p>
-      <p>Do you own any games? <input type="hidden" value="true" disabled></p>
-
+      <p>Do you own any games?</p>
+        
+      <input type="hidden" value="true" disabled>
       <div class="btn-group">
         <button data-value="true">Yes</button>
         <button data-value="false">No</button>
@@ -173,8 +177,9 @@
 
     <div class="norb dependent slave" data-dependency-group="ownership">
       <p><strong>Dependent button groups. This is the slave group:</strong></p>
-      <p>If you own games, do you play them all? <input type="hidden" disabled></p>
-
+      <p>If you own games, do you play them all?</p>
+      
+      <input type="hidden" disabled>
       <div class="btn-group">
         <button data-value="true" data-dependent-on="true">Yes</button>
         <button data-value="false" data-dependent-on="true" data-dependency="default">No</button>
@@ -198,10 +203,11 @@
   </div>
 
   <script src="src/jquery-3.1.0.min.js"></script>
-  <script src="src/nobilis-radio-buttons.js"></script>
-  <script type="text/javascript">
+  <script type="module">
+    import NoRB from "./src/index.js"
+
     // Initialize the plugin at the end of the file
-    NoRB.init();
+    NoRB.init()
   </script>
 
 </body>

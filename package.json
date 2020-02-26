@@ -14,7 +14,11 @@
   "author": "Brian Bosire, Nobilis Ltd",
   "license": "MIT",
   "repository": {
-    "type" : "git",
-    "url" : "https://github.com/nobilis-ltd/nobilis-radio-buttons.git"
+    "type": "git",
+    "url": "https://github.com/nobilis-ltd/nobilis-radio-buttons.git"
+  },
+  "dependencies": {
+    "jquery": ">3.0.0",
+    "lodash": ">4.0.0"
   }
 }
