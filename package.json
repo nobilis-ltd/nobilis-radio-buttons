@@ -1,0 +1,20 @@
+{
+  "name": "norb",
+  "version": "1.0.0",
+  "description": "Small package to enable an aesthetically pleasing display for group buttons that act as radio buttons.",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "nobilis",
+    "radio",
+    "buttons"
+  ],
+  "author": "Brian Bosire, Nobilis Ltd",
+  "license": "MIT",
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/nobilis-ltd/nobilis-radio-buttons.git"
+  }
+}
