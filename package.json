@@ -18,7 +18,7 @@
     "url": "https://github.com/nobilis-ltd/nobilis-radio-buttons.git"
   },
   "dependencies": {
-    "jquery": ">3.0.0",
+    "jquery": ">3.5.0",
     "lodash": ">4.0.0"
   }
 }
